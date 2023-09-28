@@ -5,29 +5,38 @@ body{
     height: 100vh;
     margin: 0;
     background: #222;
+    font-family: 'Mooli', sans-serif;
     font-family: 'Open Sans', sans-serif;
     background-image: url('https://source.unsplash.com/1920x1080/?landscape');
     font-size: 120%;
 }
 h1.temp{
     margin: 0;
+    margin-bottom: 0.4em;
 }
 
 /* card */
 .weatherapp{
-    background: #000000d0;
+    background: #00000086;
     color: white;
     padding: 2em;
     border-radius: 30px;
     width: 100%;
     max-width: 420px;
+    box-shadow: 0px 0px 45px;
 }
+.weatherapp:hover{
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}
+
 
 /* search field */
 .search{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0.5em;
 
 }
 input.search-bar{
@@ -35,7 +44,7 @@ input.search-bar{
     outline: none;
     padding: 0.4em 1em;
     border-radius: 24px;
-    background: #7c7c7c2b;
+    background: #00000087;
     color: white;
     font-family: inherit;
     font-size: 105%;
@@ -50,11 +59,39 @@ button{
     height: 44px;
     width: 44px;
     outline: none;
-    background: #7c7c7c2b;
+    background: #00000087;
     color: white;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 button:hover{
-    background: #7c7c7c6b;
+    background: #04b3a45b;
+}
+.description{
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 105%;
+    
+}
+.weather.loading{
+    display: none;
+    max-height: 20px ;
+    position: relative;
+}
+.weather.loading:after{
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+.info
+{
+    font-size: 120%;
 }
