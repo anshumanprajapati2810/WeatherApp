@@ -95,3 +95,8 @@ button:hover{
 {
     font-size: 120%;
 }
+.credits{
+    margin-top: 20px;
+    font-size: small;
+    margin-left: 300px;
+}
