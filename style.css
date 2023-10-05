@@ -1,13 +1,14 @@
 body{
+    background-image: url('https://source.unsplash.com/1920x1080/?landscape');
+}
+.currentWeather{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: #222;
     font-family: 'Mooli', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    background-image: url('https://source.unsplash.com/1920x1080/?landscape');
     font-size: 120%;
 }
 h1.temp{
@@ -19,15 +20,17 @@ h1.temp{
 .weatherapp{
     background: #00000086;
     color: white;
-    padding: 2em;
-    border-radius: 30px;
-    width: 100%;
-    max-width: 420px;
     box-shadow: 0px 0px 45px;
+    border-radius: 30px;
+    padding: 2em;
+    width: 100%;
+    max-width: 600px;
+    
 }
 .weatherapp:hover{
     transform: scale(1.01);
     transition: 0.2s ease-in-out;
+    background-color: #0096933e;
 }
 
 
@@ -76,6 +79,7 @@ button:hover{
     align-items: center;
     margin-bottom: 10px;
     font-size: 105%;
+    text-align: center;
     
 }
 .weather.loading{
@@ -98,5 +102,48 @@ button:hover{
 .credits{
     margin-top: 20px;
     font-size: small;
-    margin-left: 300px;
+    margin-left: 45 0px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10 px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    font-size:small;
+    background: #02888c6b;
+    color: white;
+    box-shadow: 0px 0px 10px ;
+    border-radius: 30px;
+    padding: 16px;
+    text-align: center; 
+    margin: 10px;
+    margin-top: 20px;
+  }
+  .card:hover{
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+    background-color: #7f96003e;
 }
