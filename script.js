@@ -1,6 +1,9 @@
+
 let weather = {
     "apikey" : "a6b08a1dc29854430ffaff30ae40ed92",
     "apikey2" : "18dca91f987c71d828645113346e2f32",
+
+
     fetchWeather: function(city)
     {
         
@@ -37,21 +40,6 @@ let weather = {
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1920x1080/?"+ description + "')"
     },
 
-    fetchWeatherForecast: function(city) {
-        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&cnt=4&appid=" + this.apikey2)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('City not found');
-                }
-                return response.json();
-            })
-            .then((data) => this.displayForecast(data))
-            .catch((error) => this.handleError(error));
-    },
-
-   
-
-
     handleError: function(error) {
         if (error.message === 'City not found') {
           // Handle the specific "city not found" error here
@@ -64,7 +52,7 @@ let weather = {
           console.error('Error:', error);
           // Display a general error message to the user
           document.querySelector(".weather").classList.remove("loading");
-          document.querySelector(".weather").innerText = "An error occurred while fetching weather data.";
+          document.querySelector(".weather").innerText = "An error occurred while fetching weather data. Please reload the page";
         }
     },
 

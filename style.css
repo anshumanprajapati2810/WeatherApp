@@ -1,5 +1,5 @@
 body{
-    background-image: url('https://source.unsplash.com/1920x1080/?landscape');
+    background-image: url(background.jpg);
 }
 .currentWeather{
     display: flex;
@@ -17,71 +17,104 @@ h1.temp{
 }
 
 /* card */
-.weatherapp{
-    background: #00000086;
-    color: white;
-    box-shadow: 0px 0px 45px;
-    border-radius: 30px;
-    padding: 2em;
-    width: 100%;
-    max-width: 600px;
+/* Weather App Container */
+.weatherapp {
+    background: #000000c7; /* Blue background color */
+    color: white; /* White text color */
     
+    border-top-right-radius: 50px ;
+    border-bottom-left-radius: 50px ;
+    padding: 20px; /* Increased padding for better spacing */
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.327); /* Slight shadow */
+    text-align: center; /* Center-align the content */
+    transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: 1s;
 }
-.weatherapp:hover{
-    transform: scale(1.01);
-    transition: 0.2s ease-in-out;
-    background-color: #0096933e;
+
+/* Hover effect */
+.weatherapp:hover {
+    background: #ffffffb4; /* Darker blue on hover */
+    transform: scale(1.02); /* Slight scale-up on hover */
+    border-bottom-right-radius: 50px ;
+    border-top-left-radius: 50px ;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    transition: 1s;
+    color: black;
+    box-shadow: 0px 0px 10px 10px rgba(47, 47, 47, 0.327);
 }
+
 
 
 /* search field */
-.search{
+/* Container for the search bar */
+.search {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0.5em;
-
-}
-input.search-bar{
-    border: none;
-    outline: none;
-    padding: 0.4em 1em;
-    border-radius: 24px;
-    background: #00000087;
-    color: white;
-    font-family: inherit;
-    font-size: 105%;
-    width: calc(100% - 80px);
+    margin-top: 30px; /* Increased margin for spacing */
+    margin-bottom: 30px; /* Increased margin for spacing */
 }
 
-/* button */
-button{
-    margin: 0.5em;
-    border-radius: 50%;
-    border: none;
-    height: 44px;
-    width: 44px;
+/* Search input */
+input.search-bar {
+    border: 2px solid #333; /* Added a border */
     outline: none;
-    background: #00000087;
-    color: white;
+    padding: 10px 20px; /* Increased padding for a larger input field */
+    border-radius: 5px; /* Rounded corners */
+    background: #000000c7; /* Light gray background */
+    color: #ffffff; /* Dark text color */
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 16px;
+    width: calc(100% - 200px);
+    transition: 1s;
+}
+input.search-bar:hover {
+    border: 2px solid #333; /* Added a border */
+    outline: none;
+    padding: 10px 20px; /* Increased padding for a larger input field */
+    border-radius: 20px; /* Rounded corners */
+    background: #000000c7; /* Light gray background */
+    color: #ffffff; /* Dark text color */
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 16px;
+    width: calc(100% - 180px);
+    transition: 1s;
+}
+
+/* Search button */
+button {
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: #007BFF; /* Blue background color */
+    color: white; /* White text color */
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+    transition: 1s;
 }
-button:hover{
-    background: #04b3a45b;
+
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+    border-radius: 50px;
+    transition: 1s;
 }
+
 .description{
     text-transform: capitalize;
     margin-left: 8px;
 }
-.flex{
+/* .flex{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     font-size: 105%;
     text-align: center;
     
-}
+} */
 .weather.loading{
     display: none;
     max-height: 20px ;
@@ -133,8 +166,8 @@ button:hover{
   /* Style the counter cards */
   .card {
     font-size:small;
-    background: #02888c6b;
-    color: white;
+    background: #ffffff6b;
+    color: rgb(0, 0, 0);
     box-shadow: 0px 0px 10px ;
     border-radius: 30px;
     padding: 16px;
@@ -144,6 +177,10 @@ button:hover{
   }
   .card:hover{
     transform: scale(1.01);
-    transition: 0.2s ease-in-out;
-    background-color: #7f96003e;
+    transition: 0.3s ease-in-out;
+    background-color: #0466a888;
+    color: #ffffff;
+}
+.forecastcards{
+    margin: 30px;
 }
